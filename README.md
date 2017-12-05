@@ -53,11 +53,11 @@ Finally, if you have a modern GPU(at least GTX1050Ti in my experience), try `pyt
 
 
 #### Known Issues
-For some reasons, reading a JPEG image by Matlab differs from its counterpart in opencv(77 for Matlab but 76 for python), google it and one suggests that libjpeg library may cause this inconsistency. This difference make the predictions  the For instance, with the same settings, the Matlab version detects 14 faces and pycaffe version could only detects 13, for the following image.
+For some reasons, reading a JPEG image by Matlab differs from its counterpart in opencv (77 for Matlab but 76 for python), google it and one suggests that libjpeg library may cause this inconsistency. This difference make the predictions vary a bit, for instance, with the same settings, the Matlab version detects 14 faces but pycaffe version could only detects 13. Here is the case,
 
 ![problem image](pblm.jpg)
 
-Somehow, magically, when changing the maximum image size to 1024(against 2048 in original settings), the pycaffe version detects 14 faces.
+Somehow, magically, when changing the maximum image size to 1024 (against 2048 in original settings), the pycaffe version detects 14 faces.
 
 ![problem image with low resolution](pblm2.jpg)
 
